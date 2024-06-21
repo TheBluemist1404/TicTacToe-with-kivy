@@ -1,0 +1,15 @@
+<Square>:
+    canvas:
+        Color:
+            rgba: 1,1,1,1
+        Rectangle:
+            pos: root.pos
+            size: root.size
+    canvas.before:
+        Color:
+            rgba: .5,.5,.5,1
+        Line:
+            rectangle: root.x, root.y, root.width, root.height
+            width: 2
+
+    on_press: root.press(self)

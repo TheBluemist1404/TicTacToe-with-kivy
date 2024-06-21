@@ -1,0 +1,32 @@
+<Tic_tac_toe>:
+    id: _tic_tac_toe
+    orientation: 'vertical'
+    spacing: 3
+    StatusBar:
+        id: _status_bar
+        play: _play_but
+        board: _board
+        size_hint: 1, None
+        height: 50
+
+
+    AnchorLayout:    #auto center
+        id: game
+        Board:
+            id: _board
+            status_bar: _status_bar
+            play: _play_but
+            size_hint: None, None
+            size: min(game.width, game.height),min(game.width, game.height)
+
+    AnchorLayout:
+        id: _play
+        size_hint: 1, None
+        height: 50
+        Play:
+            id: _play_but
+            status_bar: _status_bar
+            size_hint: None, None
+            size: 3*_play.height,_play.height
+            text: "Play"
+            on_press: self.start(self)
