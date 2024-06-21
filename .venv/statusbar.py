@@ -45,7 +45,7 @@ class StatusBar(BoxLayout):
 
     def gameover(self):
         self.game_start = False
-        if self.turn.text not in ["X win ", "O win"]:
+        if self.turn.text not in ["X win", "O win"]:
             self.turn.text = "It is a tie!"
 
 
